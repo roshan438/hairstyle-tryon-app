@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import TryOn from "./pages/TryOn";
 import BookBarber from "./pages/BookBarber";
 import Navbar from "./components/Navbar";
+//this is done now ai
 function App() {
   return (
     <Router>

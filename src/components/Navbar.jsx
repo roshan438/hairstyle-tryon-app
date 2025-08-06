@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss"; // We’ll style this next
-
+//this is done now ai
 function Navbar() {
   return (
     <nav className="navbar">
