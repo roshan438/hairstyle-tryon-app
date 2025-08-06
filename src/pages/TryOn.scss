@@ -1,6 +1,9 @@
 .tryon-container {
   text-align: center;
   padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfae8;
+  min-height: 100vh;
 }
 
 .preview {
@@ -9,56 +12,78 @@
   margin-top: 2rem;
 
   .base-face {
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
     border-radius: 8px;
+    border: 1px solid #ccc;
   }
 
   .overlay-style {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 160px;
     height: auto;
-    cursor: pointer;
+    cursor: move;
     z-index: 10;
   }
 }
 
 .style-options {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 
   .style-button {
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
     border: 1px solid #ccc;
     background-color: #eee;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
 
     &.active {
       background-color: #ff6b6b;
       color: white;
+      border-color: #ff6b6b;
     }
 
     &:hover {
       background-color: #ddd;
     }
+
+    &:active {
+      transform: scale(0.97);
+    }
   }
-}
-.overlay-style {
-  position: absolute;
-  width: 150px;
-  height: auto;
-  cursor: pointer;
-  z-index: 10;
 }
 
 .action-buttons {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 
   button {
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
   }
 }
 
@@ -73,4 +98,51 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
   }
+}
+
+.status-message {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid #ccc;
+    border-top: 3px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+  }
+
+  &.success {
+    color: #2e7d32;
+  }
+
+  &.loading {
+    color: #666;
+  }
+
+  &.error {
+    color: #c62828;
+  }
+}
+.download-button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: #1565c0;
+  }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
