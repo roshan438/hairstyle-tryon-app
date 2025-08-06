@@ -5,7 +5,7 @@ import * as faceapi from "face-api.js";
 import html2canvas from "html2canvas";
 
 import "./TryOn.scss";
-
+//this is done ki k
 import style1 from "../assets/hairstyles/style1.png";
 import style2 from "../assets/hairstyles/style2.png";
 import style3 from "../assets/hairstyles/style3.png";
