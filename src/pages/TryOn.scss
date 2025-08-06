@@ -1,0 +1,76 @@
+.tryon-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.preview {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+
+  .base-face {
+    width: 300px;
+    border-radius: 8px;
+  }
+
+  .overlay-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.style-options {
+  margin-top: 2rem;
+
+  .style-button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+
+    &.active {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+.overlay-style {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.action-buttons {
+  margin: 1rem 0;
+
+  button {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}
+
+.webcam-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+}
